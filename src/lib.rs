@@ -64,22 +64,22 @@ impl Point {
 
     ///Returns the point to the north of `self`. Returns `None` if its out of bounds.
     pub fn north(self) -> Option<Self> {
-        self.checked_add(Point(0, 1, 0, 0))
+        self.checked_add(Point(0, 1, self.2, self.3))
     }
 
     ///Returns the point to the south of `self`. Returns `None` if its out of bounds.
     pub fn south(self) -> Option<Self> {
-        self.checked_sub(Point(0, 1, 0, 0))
+        self.checked_sub(Point(0, 1, self.2, self.3))
     }
 
     ///Returns the point to the east of `self`. Returns `None` if its out of bounds.
     pub fn east(self) -> Option<Self> {
-        self.checked_add(Point(1, 0, 0, 0))
+        self.checked_add(Point(1, 0, self.2, self.3))
     }
 
     ///Returns the point to the west of `self`. Returns `None` if its out of bounds.
     pub fn west(self) -> Option<Self> {
-        self.checked_sub(Point(1, 0, 0, 0))
+        self.checked_sub(Point(1, 0, self.2, self.3))
     }
 }
 
